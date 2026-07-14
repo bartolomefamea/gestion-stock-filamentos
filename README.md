@@ -119,16 +119,17 @@ Color | Fabricante | Cantidad
 ## Capturas de pantalla
 
 ### Pantalla principal
-
-![Pantalla principal](docs/img/pantalla-principal.png)
+![Pantalla principal](docs_img/pantalla-principal.png)
 
 ### Historial de movimientos
-
-![Historial de movimientos](docs/img/historial.png)
+![Historial](docs_img/historial.png)
 
 ### Importación de Excel
+![Importar Excel](docs_img/importar-excel.png)
 
-![Importación de Excel](docs/img/importar-excel.png)
+### Acción en el stock
+![Gestión de stock](docs_img/retirar-filamento.png)
+
 
 ## Próximas mejoras
 
