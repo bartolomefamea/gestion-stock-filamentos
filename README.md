@@ -55,19 +55,19 @@ Actualmente el proyecto se ejecuta de forma local con Python.
 1. Clonar el repositorio:
 
 ```bash
-git clone URL_DEL_REPOSITORIO
+git clone https://github.com/bartolomefamea/gestion-stock-filamentos.git
 ```
 
 2. Entrar a la carpeta del proyecto:
 
 ```bash
-cd NOMBRE_DEL_PROYECTO
+cd gestion-stock-filamentos
 ```
 
 3. Instalar las dependencias necesarias:
 
 ```bash
-pip install flask openpyxl
+pip install -r requirements.txt
 ```
 
 4. Ejecutar la aplicación:
@@ -81,8 +81,19 @@ python app.py
 ```text
 http://127.0.0.1:5000
 ```
+El repositorio incluye un archivo stock_ejemplo.xlsx para probar la importacion de datos desde Excel.
 
-En próximas versiones se plantea preparar una forma más simple de ejecución para usuarios finales.
+**Próximas mejoras**
+
+```md
+## Próximas mejoras
+
+- Mejorar validaciones al importar archivos Excel.
+- Agregar filtros más avanzados al historial.
+- Mejorar el diseño responsive.
+- Agregar identificación visual automática de colores de filamento.
+- Preparar una forma más simple de ejecución para usuarios finales.
+- Evaluar una futura versión desplegada o empaquetada.
 
 ## Uso básico
 
@@ -107,19 +118,17 @@ Color | Fabricante | Cantidad
 
 ## Capturas de pantalla
 
-Sección reservada para agregar imágenes del proyecto.
-
 ### Pantalla principal
 
-<!-- Agregar captura de la pantalla principal -->
+![Pantalla principal](docs/img/pantalla-principal.png)
 
-### Gestión de stock
+### Historial de movimientos
 
-<!-- Agregar captura de agregar, editar o retirar stock -->
+![Historial de movimientos](docs/img/historial.png)
 
-### Importación y exportación de Excel
+### Importación de Excel
 
-<!-- Agregar captura de la sección de Excel -->
+![Importación de Excel](docs/img/importar-excel.png)
 
 ## Próximas mejoras
 
