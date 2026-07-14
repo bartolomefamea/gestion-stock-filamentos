@@ -1,0 +1,30 @@
+[
+    {
+        "fecha": "2026-07-14",
+        "accion": "Agrego",
+        "color_del_filamento": "Amarillo",
+        "fabricante_del_filamento": "Prueba",
+        "cantidad": 3
+    },
+    {
+        "fecha": "2026-07-14",
+        "accion": "Retiro",
+        "color_del_filamento": "Amarillo",
+        "fabricante_del_filamento": "Prueba",
+        "cantidad": 3
+    },
+    {
+        "fecha": "2026-07-14",
+        "accion": "Eliminado",
+        "color_del_filamento": "Amarillo",
+        "fabricante_del_filamento": "Prueba",
+        "cantidad": 0
+    },
+    {
+        "fecha": "2026-07-14",
+        "accion": "Corregido",
+        "color_del_filamento": "Azul",
+        "fabricante_del_filamento": "Print",
+        "cantidad": 4
+    }
+]

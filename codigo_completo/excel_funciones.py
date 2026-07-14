@@ -15,7 +15,7 @@ def exportar_stock_a_excel(stock_filamentos):
     for filamento in stock_filamentos:
         hoja.append([filamento.color, filamento.fabricante, filamento.cantidad])
 
-        ultima_fila = hoja.max_row
+    ultima_fila = hoja.max_row
 
     tabla = Table(displayName="TablaStock", ref=f"A1:C{ultima_fila}")
 
