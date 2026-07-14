@@ -83,17 +83,6 @@ http://127.0.0.1:5000
 ```
 El repositorio incluye un archivo stock_ejemplo.xlsx para probar la importacion de datos desde Excel.
 
-**Próximas mejoras**
-
-```md
-## Próximas mejoras
-
-- Mejorar validaciones al importar archivos Excel.
-- Agregar filtros más avanzados al historial.
-- Mejorar el diseño responsive.
-- Agregar identificación visual automática de colores de filamento.
-- Preparar una forma más simple de ejecución para usuarios finales.
-- Evaluar una futura versión desplegada o empaquetada.
 
 ## Uso básico
 
