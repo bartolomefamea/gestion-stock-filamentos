@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block contenido %}
+
+<section class="contenedor">
+    <div class="importar-tarjeta">
+        <h2>Importar Excel</h2>
+        <p>Subí un archivo con las columnas Color, Fabricante y Cantidad.</p>
+
+        <form method="POST" enctype="multipart/form-data" class="form-importar">
+            <label for="archivo_excel">Archivo Excel</label>
+
+            <input
+                type="file"
+                id="archivo_excel"
+                name="archivo_excel"
+                accept=".xlsx"
+                required
+                hidden
+            >
+
+            <label for="archivo_excel" class="selector-archivo">
+                📁 Seleccionar archivo Excel
+            </label>
+
+            <span id="nombreArchivo" class="nombre-archivo">
+                Ningún archivo seleccionado
+            </span>
+
+            <button type="submit">Importar stock</button>
+        </form>
+    </div>
+</section>
+
+{% endblock %}

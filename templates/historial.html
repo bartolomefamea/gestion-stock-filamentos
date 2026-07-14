@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block contenido %}
+
+<section class="contenedor">
+    <h1>Historial de movimientos</h1>
+
+    <input
+        class="buscador-historial"
+        type="text"
+        id="buscadorHistorial"
+        placeholder="Buscar por color, fabricante, fecha o movimiento..."
+    >
+
+    <table>
+        <thead>
+            <tr>
+                <th>Fecha</th>
+                <th>Acción</th>
+                <th>Color</th>
+                <th>Fabricante</th>
+                <th>Cantidad</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for movimiento in movimientos %}
+            <tr class="fila-historial">
+                <td>{{ movimiento.fecha }}</td>
+                <td>{{ movimiento.accion }}</td>
+                <td>{{ movimiento.color_del_filamento }}</td>
+                <td>{{ movimiento.fabricante_del_filamento }}</td>
+                <td>{{ movimiento.cantidad }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</section>
+
+<script>
+const buscadorHistorial = document.getElementById("buscadorHistorial");
+
+if (buscadorHistorial) {
+    buscadorHistorial.addEventListener("input", function () {
+        const texto = buscadorHistorial.value.toLowerCase();
+        const filas = document.querySelectorAll(".fila-historial");
+
+        filas.forEach(fila => {
+            const contenido = fila.textContent.toLowerCase();
+            fila.style.display = contenido.includes(texto) ? "" : "none";
+        });
+    });
+}
+</script>
+{% endblock %}

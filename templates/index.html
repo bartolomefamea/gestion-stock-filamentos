@@ -1,0 +1,215 @@
+{% extends "base.html" %}
+
+{% block contenido %}
+
+<section class="contenedor">
+
+    <div class="layout-stock">
+
+        <aside class="panel-resumen">
+            <h2>Resumen</h2>
+
+            <div class="tarjetas">
+
+                <div class="tarjeta rollos" onclick="filtrarStock('todos')">
+                    <div class="icono icono-rollos">📦</div>
+                    <p>{{ stock|sum(attribute='cantidad') }}</p>
+                    <h3>Stock total</h3>
+                </div>
+
+                <div class="tarjeta bajo-stock" onclick="filtrarStock('bajo')">
+                    <div class="icono">⚠️</div>
+                    <p>{{ stock|selectattr('cantidad','gt',0)|selectattr('cantidad','le',2)|list|length }}</p>
+                    <h3>Stock bajo</h3>
+                </div>
+
+                <div class="tarjeta sin-stock" onclick="filtrarStock('sin')">
+                    <div class="icono">❌</div>
+                    <p>{{ stock|selectattr('cantidad','equalto',0)|list|length }}</p>
+                    <h3>Sin stock</h3>
+                </div>
+
+            </div>
+        </aside>
+
+        <section class="panel-tabla">
+
+            <div class="cabecera-stock">
+                <h2>Stock de Filamentos</h2>
+
+                <div class="acciones-stock">
+                    <button class="boton-stock" onclick="mostrarPanel('panelAgregar')">➕ Agregar</button>
+                    <button class="boton-stock" onclick="mostrarPanel('panelRetirar')">➖ Retirar</button>
+                    <button class="boton-stock" onclick="mostrarPanel('panelBuscar')">🔍 Buscar</button>
+                </div>
+            </div>
+
+            <div id="panelAgregar" class="panel-formulario">
+                <div class="panel-formulario-header">
+                    <h2>Agregar filamento</h2>
+                    <button type="button" onclick="cerrarPanel('panelAgregar')">×</button>
+                </div>
+
+                {% include "forms/agregar_form.html" %}
+            </div>
+
+            <div id="panelRetirar" class="panel-formulario">
+                <div class="panel-formulario-header">
+                    <h2>Retirar filamento</h2>
+                    <button type="button" onclick="cerrarPanel('panelRetirar')">×</button>
+                </div>
+
+                {% include "forms/retirar_form.html" %}
+            </div>
+
+            <div id="panelBuscar" class="panel-formulario">
+                <div class="panel-formulario-header">
+                    <h2>Buscar filamento</h2>
+                    <button type="button" onclick="cerrarPanel('panelBuscar')">×</button>
+                </div>
+
+                {% include "forms/buscar_form.html" %}
+            </div>
+
+            <div id="panelEditar" class="panel-formulario">
+                <div class="panel-formulario-header">
+                    <h2>Editar filamento</h2>
+                    <button type="button" onclick="cerrarPanel('panelEditar')">×</button>
+                </div>
+
+                <div class="opciones-editar">
+                    <button type="button" onclick="mostrarEdicion('stock')">Agregar / Retirar stock</button>
+                    <button type="button" onclick="mostrarEdicion('datos')">Corregir datos</button>
+                </div>
+
+                <form id="formEditarStock" method="POST" action="/editar_stock" style="display:none;">
+                    <input type="hidden" id="editarStockColor" name="color">
+                    <input type="hidden" id="editarStockFabricante" name="fabricante">
+
+                    <div class="campo-form">
+                        <label>Acción</label>
+                        <select name="accion" required>
+                            <option value="agregar">Agregar stock</option>
+                            <option value="retirar">Retirar stock</option>
+                        </select>
+                    </div>
+
+                    <div class="campo-form">
+                        <label>Cantidad</label>
+                        <input type="number" name="cantidad" min="1" required>
+                    </div>
+
+                    <button type="submit">Guardar</button>
+                </form>
+
+                <form id="formEditarDatos" method="POST" action="/corregir_filamento" style="display:none;">
+                    <input type="hidden" id="colorOriginal" name="color_original">
+                    <input type="hidden" id="fabricanteOriginal" name="fabricante_original">
+
+                    <div class="campo-form">
+                        <label>Color</label>
+                        <input type="text" id="corregirColor" name="color" required>
+                    </div>
+
+                    <div class="campo-form">
+                        <label>Fabricante</label>
+                        <input type="text" id="corregirFabricante" name="fabricante" required>
+                    </div>
+
+                    <div class="campo-form">
+                        <label>Cantidad actual</label>
+                        <input type="number" id="corregirCantidad" name="cantidad" min="0" required>
+                    </div>
+
+                    <button type="submit">Guardar cambios</button>
+                </form>
+            </div>
+
+            <div id="panelEliminar" class="panel-formulario">
+                <div class="panel-formulario-header">
+                    <h2>Eliminar filamento</h2>
+                    <button type="button" onclick="cerrarPanel('panelEliminar')">×</button>
+                </div>
+
+                <p>
+                    Vas a eliminar:
+                    <strong id="textoFilamentoEliminar"></strong>
+                </p>
+
+                <form method="POST" action="/eliminar">
+                    <input type="hidden" id="eliminarColor" name="color">
+                    <input type="hidden" id="eliminarFabricante" name="fabricante">
+
+                    <button type="submit" class="boton-panel-opcion">
+                        Eliminar
+                    </button>
+                </form>
+            </div>
+
+
+            <table>
+                <tr>
+                    <th>Color</th>
+                    <th>Fabricante</th>
+                    <th>Cantidad</th>
+                    <th>Acciones</th>
+                </tr>
+
+                {% for filamento in stock %}
+                <tr class="fila-stock {% if filamento.cantidad == 0 %}sin-stock-row{% elif filamento.cantidad <= 2 %}bajo-stock-row{% else %}stock-ok-row{% endif %}">
+                    <td>{{ filamento.color }}</td>
+                    <td>{{ filamento.fabricante }}</td>
+                    <td>
+                        <span class="
+                            cantidad-stock
+                            {% if filamento.cantidad <= 1 %}
+                                cantidad-roja
+                            {% elif filamento.cantidad <= 3 %}
+                                cantidad-naranja
+                            {% else %}
+                                cantidad-verde
+                            {% endif %}
+                        ">
+                            {{ filamento.cantidad }}
+                        </span>
+                    </td>
+                    <td class="acciones">
+                        <button
+                            class="accion editar"
+                            onclick="abrirPanelEditar(
+                                event,
+                                '{{ filamento.color }}',
+                                '{{ filamento.fabricante }}',
+                                '{{ filamento.cantidad }}'
+                            )"
+                        >
+                            ✏️
+                        </button>
+                        <button
+                            class="accion borrar"
+                            type="button"
+                            onclick="abrirPanelEliminar(
+                                event, 
+                                '{{ filamento.color }}', 
+                                '{{ filamento.fabricante }}'
+                            )"
+                        >
+                            🗑️
+                        </button>
+                        
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+
+        </section>
+
+    </div>
+
+</section>
+
+
+
+
+
+{% endblock %}

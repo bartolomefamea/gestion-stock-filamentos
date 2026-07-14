@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Indigo 3D - Gestión de Stock</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+
+    
+<header>
+
+    <div class="logo">
+
+        <h1>Indigo 3D</h1>
+        <p>Gestión de Stock de Filamentos</p>
+
+    </div>
+
+    <nav>
+
+        <a href="/">🏠 Inicio</a>
+        <a href="/historial">📋 Historial</a>
+
+        <a href="/descargar_excel">📊 Exportar Excel</a>
+        <a href="/importar_excel">📥 Importar Excel</a>
+
+    </nav>
+
+</header>
+
+<main>
+    {% with mensajes = get_flashed_messages(with_categories=true) %}
+        {% if mensajes %}
+            <div class="mensajes">
+                {% for categoria, mensaje in mensajes %}
+                    <div class="mensaje {{ categoria }}">
+                        {{ mensaje }}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+    {% block contenido %}
+    {% endblock %}
+
+</main>
+
+ <script src="{{ url_for('static', filename='app.js') }}"></script>
+
+</body>
+</html>

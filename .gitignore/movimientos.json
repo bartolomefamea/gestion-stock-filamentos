@@ -1,0 +1,338 @@
+[
+    {
+        "fecha": "2026-07-05",
+        "accion": "Retiro",
+        "color_del_filamento": "Blanco",
+        "fabricante_del_filamento": "Palot",
+        "cantidad": 4
+    },
+    {
+        "fecha": "2026-07-05",
+        "accion": "Agrego",
+        "color_del_filamento": "Blanco",
+        "fabricante_del_filamento": "Palot",
+        "cantidad": 2
+    },
+    {
+        "fecha": "2026-07-05",
+        "accion": "Retiro",
+        "color_del_filamento": "Blanco",
+        "fabricante_del_filamento": "Palot",
+        "cantidad": 3
+    },
+    {
+        "fecha": "2026-07-05",
+        "accion": "Agrego",
+        "color_del_filamento": "Azul",
+        "fabricante_del_filamento": "Bambu",
+        "cantidad": 4
+    },
+    {
+        "fecha": "2026-07-05",
+        "accion": "Agrego",
+        "color_del_filamento": "Amarillo",
+        "fabricante_del_filamento": "Print",
+        "cantidad": 1
+    },
+    {
+        "fecha": "2026-07-05",
+        "accion": "Agrego",
+        "color_del_filamento": "Negro",
+        "fabricante_del_filamento": "Grilon",
+        "cantidad": 10
+    },
+    {
+        "fecha": "2026-07-05",
+        "accion": "Agrego",
+        "color_del_filamento": "Blanco",
+        "fabricante_del_filamento": "Bambu",
+        "cantidad": 2
+    },
+    {
+        "fecha": "2026-07-05",
+        "accion": "Retiro",
+        "color_del_filamento": "Amarillo",
+        "fabricante_del_filamento": "Print",
+        "cantidad": 1
+    },
+    {
+        "fecha": "2026-07-09",
+        "accion": "Agrego",
+        "color_del_filamento": "Negro",
+        "fabricante_del_filamento": "Palot",
+        "cantidad": 3
+    },
+    {
+        "fecha": "2026-07-09",
+        "accion": "Agrego",
+        "color_del_filamento": "Naranja",
+        "fabricante_del_filamento": "Bambu",
+        "cantidad": 5
+    },
+    {
+        "fecha": "2026-07-09",
+        "accion": "Retiro",
+        "color_del_filamento": "Negro",
+        "fabricante_del_filamento": "Grilon",
+        "cantidad": 10
+    },
+    {
+        "fecha": "2026-07-09",
+        "accion": "Agrego",
+        "color_del_filamento": "Verde esmeralda",
+        "fabricante_del_filamento": "Bambu",
+        "cantidad": 5
+    },
+    {
+        "fecha": "2026-07-09",
+        "accion": "Retiro",
+        "color_del_filamento": "Azul",
+        "fabricante_del_filamento": "Printalot",
+        "cantidad": 1
+    },
+    {
+        "fecha": "2026-07-09",
+        "accion": "Retiro",
+        "color_del_filamento": "Naranja",
+        "fabricante_del_filamento": "Bambu",
+        "cantidad": 3
+    },
+    {
+        "fecha": "2026-07-09",
+        "accion": "Agrego",
+        "color_del_filamento": "Amarillo",
+        "fabricante_del_filamento": "Print",
+        "cantidad": 4
+    },
+    {
+        "fecha": "2026-07-09",
+        "accion": "Retiro",
+        "color_del_filamento": "Blanco",
+        "fabricante_del_filamento": "Bambu",
+        "cantidad": 3
+    },
+    {
+        "fecha": "2026-07-11",
+        "accion": "Retiro",
+        "color_del_filamento": "Amarillo",
+        "fabricante_del_filamento": "Bambu",
+        "cantidad": 1
+    },
+    {
+        "fecha": "2026-07-11",
+        "accion": "Retiro",
+        "color_del_filamento": "Amarillo",
+        "fabricante_del_filamento": "Palot",
+        "cantidad": 1
+    },
+    {
+        "fecha": "2026-07-11",
+        "accion": "Agrego",
+        "color_del_filamento": "Rojo",
+        "fabricante_del_filamento": "Prueba",
+        "cantidad": 1
+    },
+    {
+        "fecha": "2026-07-11",
+        "accion": "Agrego",
+        "color_del_filamento": "Amarillo",
+        "fabricante_del_filamento": "Palot",
+        "cantidad": 1
+    },
+    {
+        "fecha": "2026-07-11",
+        "accion": "Agrego",
+        "color_del_filamento": "Rojo",
+        "fabricante_del_filamento": "Prueba",
+        "cantidad": 2
+    },
+    {
+        "fecha": "2026-07-11",
+        "accion": "Agrego",
+        "color_del_filamento": "Amarillo",
+        "fabricante_del_filamento": "Palot",
+        "cantidad": 1
+    },
+    {
+        "fecha": "2026-07-11",
+        "accion": "Retiro",
+        "color_del_filamento": "Amarillo",
+        "fabricante_del_filamento": "Bambu",
+        "cantidad": 3
+    },
+    {
+        "fecha": "2026-07-11",
+        "accion": "Retiro",
+        "color_del_filamento": "Azul marine",
+        "fabricante_del_filamento": "Print",
+        "cantidad": 3
+    },
+    {
+        "fecha": "2026-07-11",
+        "accion": "Agrego",
+        "color_del_filamento": "Celeste",
+        "fabricante_del_filamento": "Print",
+        "cantidad": 2
+    },
+    {
+        "fecha": "2026-07-11",
+        "accion": "Retiro",
+        "color_del_filamento": "Celeste",
+        "fabricante_del_filamento": "Print",
+        "cantidad": 2
+    },
+    {
+        "fecha": "2026-07-11",
+        "accion": "Agrego",
+        "color_del_filamento": "Anochecer",
+        "fabricante_del_filamento": "1",
+        "cantidad": 1
+    },
+    {
+        "fecha": "2026-07-11",
+        "accion": "Eliminado",
+        "color_del_filamento": "Amarillo",
+        "fabricante_del_filamento": "Palot",
+        "cantidad": 3
+    },
+    {
+        "fecha": "2026-07-11",
+        "accion": "Corregido",
+        "color_del_filamento": "Amarillo",
+        "fabricante_del_filamento": "Print",
+        "cantidad": 3
+    },
+    {
+        "fecha": "2026-07-11",
+        "accion": "Agrego",
+        "color_del_filamento": "Amarillo",
+        "fabricante_del_filamento": "Bambu",
+        "cantidad": 2
+    },
+    {
+        "fecha": "2026-07-11",
+        "accion": "Corregido",
+        "color_del_filamento": "Celeste",
+        "fabricante_del_filamento": "Print",
+        "cantidad": 2
+    },
+    {
+        "fecha": "2026-07-11",
+        "accion": "Retiro",
+        "color_del_filamento": "Amarillo",
+        "fabricante_del_filamento": "Print",
+        "cantidad": 1
+    },
+    {
+        "fecha": "2026-07-11",
+        "accion": "Agrego",
+        "color_del_filamento": "Amarillo",
+        "fabricante_del_filamento": "Print",
+        "cantidad": 2
+    },
+    {
+        "fecha": "2026-07-11",
+        "accion": "Corregido",
+        "color_del_filamento": "Azul noche",
+        "fabricante_del_filamento": "Palot",
+        "cantidad": 3
+    },
+    {
+        "fecha": "2026-07-11",
+        "accion": "Corregido",
+        "color_del_filamento": "Azul noche",
+        "fabricante_del_filamento": "Print",
+        "cantidad": 3
+    },
+    {
+        "fecha": "2026-07-11",
+        "accion": "Agrego",
+        "color_del_filamento": "Azul",
+        "fabricante_del_filamento": "Palot",
+        "cantidad": 1
+    },
+    {
+        "fecha": "2026-07-11",
+        "accion": "Corregido",
+        "color_del_filamento": "Azul",
+        "fabricante_del_filamento": "Palot",
+        "cantidad": 0
+    },
+    {
+        "fecha": "2026-07-13",
+        "accion": "Ingreso",
+        "color_del_filamento": "Amarillo",
+        "fabricante_del_filamento": "Bambu",
+        "cantidad": 1
+    },
+    {
+        "fecha": "2026-07-13",
+        "accion": "Retiro",
+        "color_del_filamento": "Rojo",
+        "fabricante_del_filamento": "Print",
+        "cantidad": 5
+    },
+    {
+        "fecha": "2026-07-13",
+        "accion": "Agrego",
+        "color_del_filamento": "Amarillo",
+        "fabricante_del_filamento": "Palot",
+        "cantidad": 2
+    },
+    {
+        "fecha": "2026-07-13",
+        "accion": "Retiro",
+        "color_del_filamento": "Amarillo",
+        "fabricante_del_filamento": "Print",
+        "cantidad": 3
+    },
+    {
+        "fecha": "2026-07-13",
+        "accion": "Corregido",
+        "color_del_filamento": "Azul",
+        "fabricante_del_filamento": "Print",
+        "cantidad": 4
+    },
+    {
+        "fecha": "2026-07-13",
+        "accion": "Ingreso",
+        "color_del_filamento": "Celeste",
+        "fabricante_del_filamento": "Print",
+        "cantidad": 1
+    },
+    {
+        "fecha": "2026-07-13",
+        "accion": "Retiro",
+        "color_del_filamento": "Azul",
+        "fabricante_del_filamento": "Bambu",
+        "cantidad": 1
+    },
+    {
+        "fecha": "2026-07-14",
+        "accion": "Retiro",
+        "color_del_filamento": "Verde",
+        "fabricante_del_filamento": "Hellbot",
+        "cantidad": 2
+    },
+    {
+        "fecha": "2026-07-14",
+        "accion": "Agrego",
+        "color_del_filamento": "Azul noche",
+        "fabricante_del_filamento": "Palot",
+        "cantidad": 1
+    },
+    {
+        "fecha": "2026-07-14",
+        "accion": "Agrego",
+        "color_del_filamento": "Negro paco",
+        "fabricante_del_filamento": "Bambu",
+        "cantidad": 3
+    },
+    {
+        "fecha": "2026-07-14",
+        "accion": "Retiro",
+        "color_del_filamento": "Amarillo",
+        "fabricante_del_filamento": "Palot",
+        "cantidad": 1
+    }
+]
